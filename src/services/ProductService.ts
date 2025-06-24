@@ -3,8 +3,6 @@ import { Product } from "../interfaces/Product";
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 const API_URL = API_BASE_URL + "/products"
 
-console.log(API_BASE_URL)
-
 export class ProductService {
   static async getAll(): Promise<Product[]> {
     const res = await fetch(API_URL);
