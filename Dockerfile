@@ -4,7 +4,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copiar archivos de proyecto y dependencias
-COPY ..
+COPY . .
 
 RUN npm install
 RUN npm run build
