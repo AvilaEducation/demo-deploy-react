@@ -52,10 +52,13 @@ function App() {
   return (
     <div className="p-4">
       <h1 className="text-xl mb-4">Product Manager - Techlab</h1>
+      <h2>Crear/Actualizar</h2>
       <ProductForm onSave={handleSave} product={editing} />
 
+      <h2>Buscador</h2>
       <ProductSearch onSearch={handleSearch} />
 
+      <h2>Listado</h2>
       <ProductList products={products} onEdit={setEditing} onDelete={handleDelete} />
     </div>
   );

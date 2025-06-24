@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Product } from "../interfaces/Product";
 
 type Props = {
@@ -7,9 +7,19 @@ type Props = {
 };
 
 export default function ProductForm({ onSave, product }: Props) {
-  const [form, setForm] = useState<Product>(
-    product || { name: "", price: "", description: "", img: "" }
-  );
+  const defaultProduct: Product = {
+    name: "",
+    price: 0,
+    description: "",
+    img: ""
+  };
+  const [form, setForm] = useState<Product>(defaultProduct);
+
+  useEffect(() => {
+    if (product) {
+      setForm(product);
+    }
+  }, [product]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -19,11 +29,11 @@ export default function ProductForm({ onSave, product }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(form);
-    setForm({ name: "", price: "", description: "", img: "" });
+    setForm(defaultProduct);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
+    <form onSubmit={handleSubmit} className="p-4 border rounded mb-4 d-flex">
       <input name="name" value={form.name} onChange={handleChange} placeholder="Name" required />
       <input name="price" value={form.price} onChange={handleChange} placeholder="Price" required />
       <input name="description" value={form.description} onChange={handleChange} placeholder="Description" required />

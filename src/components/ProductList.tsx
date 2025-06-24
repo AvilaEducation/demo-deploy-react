@@ -9,10 +9,10 @@ type Props = {
 
 export default function ProductList({ products, onEdit, onDelete }: Props) {
   return (
-    <div>
+    <div className="limit-container">
       {products.map((p) => (
         <div key={p.id} className="border p-2 mb-2">
-          <h2>{p.name}</h2>
+          <h3>{p.name}</h3>
           <img src={p.img || box} alt={p.name} width={100} />
           <p>{p.description}</p>
           <p>{p.price}</p>
