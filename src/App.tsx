@@ -48,7 +48,7 @@ function App() {
   //     .then(() => setProducts((prev) => prev.filter((p) => p.id !== id)))
   //     .catch(handleError);
   // };
-
+console.log(import.meta.env.VITE_API_URL || "http://localhost:8080")
   return (
     <div className="p-4">
       <h1 className="text-xl mb-4">Product Manager - Techlab</h1>
