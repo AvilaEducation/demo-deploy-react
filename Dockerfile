@@ -12,6 +12,10 @@ RUN npm install
 # Copiar todo el proyecto
 COPY . .
 
+# Inyectar la variable manualmente en el entorno del build
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 # Build producción
 RUN npm run build
 
