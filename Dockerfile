@@ -4,11 +4,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copiar archivos de proyecto y dependencias
-COPY package*.json ./
-COPY tsconfig*.json ./
-COPY vite.config.* ./
-COPY ./src ./src
-COPY ./public ./public
+COPY ..
 
 RUN npm install
 RUN npm run build
