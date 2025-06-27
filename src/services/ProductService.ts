@@ -16,6 +16,12 @@ export class ProductService {
     return await res.json();
   }
 
+  static async searchById(id: number): Promise<Product> {
+    const res = await fetch(`${API_URL}/${id}`);
+    if (!res.ok) throw await res.json();
+    return await res.json();
+  }
+
   static async create(product: Product): Promise<Product> {
     const res = await fetch(API_URL, {
       method: "POST",

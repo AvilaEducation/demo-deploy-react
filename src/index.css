@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -64,4 +66,29 @@ form{
 .limit-container{
   overflow: auto;
   max-height: 45vh;
+}
+/* Scrollbar para Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b; /* gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2563eb; /* blue-600 */
+  border-radius: 4px;
+  border: 2px solid #1e293b; /* matching track color */
+}
+
+/* Dark mode overrides */
+::-webkit-scrollbar-track {
+  background: #111827; /* gray-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #60a5fa; /* blue-400 */
+  border: 2px solid #111827;
 }
