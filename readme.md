@@ -1,41 +1,70 @@
----
-title: Vite + React
-description: The default Vite + React starter, utilizing `Caddy` to serve the built app
-tags:
-  - node
-  - vite
-  - react
+# 🌐 Product Manager Frontend
+
+Este proyecto es la interfaz web frontend para la aplicación **Product Manager**, que permite a los
+usuarios gestionar productos tecnológicos de forma sencilla e intuitiva.
+
 ---
 
-# Vite + React + Caddy
+## 🚀 Características principales
 
-This is a [Vite + React](https://vitejs.dev/guide/#trying-vite-online) starter that uses [Caddy](https://caddyserver.com/).
+- Interfaz amigable y responsiva.
+- Integración completa con la API backend para CRUD de productos.
+- Buscador de productos por nombre.
+- Visualización detallada de productos.
+- Creación y edición de productos con formularios claros y accesibles.
+- Soporte para modo oscuro y claro.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/NeiLty?referralCode=ySCnWl)
+---
 
-## ✨ Features
+## 🔗 Enlaces importantes
 
-- Vite + React
-- [Caddy](https://caddyserver.com/)
+| Recurso              | URL                                                                                                      |
+|----------------------|----------------------------------------------------------------------------------------------------------|
+| 🌐 Frontend App      | [https://frontend-techlab.up.railway.app/](https://frontend-techlab.up.railway.app/)                     |
+| 🔧 Backend API       | [https://backend-java-techlab.up.railway.app/](https://backend-java-techlab.up.railway.app/)             |
+| 📄 Documentación API | [https://backend-java-techlab.up.railway.app/docs](https://backend-java-techlab.up.railway.app/docs)     |
+| 📄 Backend Repo      | [https://github.com/AvilaEducation/demo-deploy-java](https://github.com/AvilaEducation/demo-deploy-java) |
 
-## 💁‍♀️ How to use
+---
 
-- Install required dependencies with `npm install`
-- Start the server for local development `npm run dev`
+## 🛠️ Tecnologías utilizadas
 
-## ❓ Why use `Caddy` when deploying to Railway?
+- React 18
+- Vite
+- Tailwind CSS
+- JavaScript / TypeScript
+- Fetch API para consumo del backend
+- React Hooks (useState, useEffect, etc.)
 
-Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than Vite is, using Caddy will result in much less memory and cpu usage compared to serving with Vite (much lower running costs too)
+---
 
-To see how this is achieved with nixpacks, check out the fully documented nixpacks.toml file in this repository
+## ⚙️ Instalación y ejecución local
 
-The configuration for Caddy is called a Caddyfile, and you can edit that file to further suite your needs, by default it comes configured to serve a single page app for React, and to also gzip the responses
+1. **Clonar el repositorio**
 
-**Relevant Caddy documentation:**
+   ```bash
+   git clone git@github.com:AvilaEducation/demo-deploy-react.git
+   cd demo-deploy-react
+   ```
 
-- [The Caddyfile](https://caddyserver.com/docs/caddyfile)
-- [Caddyfile Directives](https://caddyserver.com/docs/caddyfile/directives)
-- [root](https://caddyserver.com/docs/caddyfile/directives/root)
-- [encode](https://caddyserver.com/docs/caddyfile/directives/encode)
-- [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)
-- [try_files](https://caddyserver.com/docs/caddyfile/directives/try_files)
+2. **Instalar dependencias**
+
+   ```bash
+   npm install
+   ```
+   
+3. **Iniciar servidor de desarrollo**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Abrir la aplicación en el navegador**
+
+   ```arduino
+   http://localhost:5173
+   ```
+   
+5. **Asegurate de estar corriendo el backend**
+recuerda tener levantada la app del backend para que funcione correctamente
+Puedes bajar la app desde aca: [📄 Backend Repo](https://github.com/AvilaEducation/demo-deploy-java)
